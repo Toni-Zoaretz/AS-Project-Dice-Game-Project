@@ -49,6 +49,11 @@ span {
   gap: 2rem;
 }
 
+.dice-imgs {
+  padding: 1rem;
+  background-color: blueviolet;
+}
+
 .box {
   border: 1px solid #333;
   width: 50rem;
