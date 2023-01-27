@@ -20,22 +20,34 @@
   <body>
     <div class="welcome">
       <h1>WELCOME TO THE DICE GAME!</h1>
-      <ul>
-        <li>The game has 2 players, playing in rounds.</li>
-        <li>In each turn, a player rolls 2 dice as many times as he wishes.</li>
-        <li>
-          Each result will get added to his round’s score. But if the player
-          rolls a double six all his round’s score gets lost After that, it's
-          the next player’s turn.
-        </li>
-        <li>
-          A player can choose to ‘Hold’, which means that his round’s score gets
-          added to his global score. After that, it's the next player's turn.
-        </li>
-        <li>The first player to reach 100 points wins</li>
-      </ul>
-      <div>SELECT A TARGET NUMBER</div>
-      <input type="number" name="numer" id="numer" />
+      <p>
+        <span
+          ><i class="fa-solid fa-dice"></i>The game has 2 players, playing in
+          rounds.</span
+        ><br />
+        <span
+          ><i class="fa-solid fa-dice"></i>In each turn, a player rolls 2 dice
+          as many times as he wishes.</span
+        ><br />
+        <span
+          ><i class="fa-solid fa-dice"></i> Each result will get added to his
+          round’s score. But if the player rolls a double six all his round’s
+          score gets lost After that, it's the next player’s turn. </span
+        ><br />
+        <span
+          ><i class="fa-solid fa-dice"></i> A player can choose to ‘Hold’, which
+          means that his round’s score gets added to his global score. After
+          that, it's the next player's turn. </span
+        ><br />
+        <span
+          ><i class="fa-solid fa-dice"></i>The first player to reach 100 points
+          wins</span
+        >
+      </p>
+
+      <div class="select">SELECT A TARGET NUMBER</div>
+      <input type="number" name="target" id="inputTarget" min="100" max="100" />
+      <button class="strat-game">START GAME</button>
     </div>
     <div class="flex-contanier">
       <!-- -------------PLAYER-1------------- -->
