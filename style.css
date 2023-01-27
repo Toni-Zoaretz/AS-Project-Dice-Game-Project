@@ -103,10 +103,6 @@ i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* margin-top: 70vh; */
-  /* margin-right: 35vw; */
-  /* margin: 0 auto; */
-  /* width: 8rem; */
 }
 
 .player-bottom {
@@ -133,10 +129,6 @@ i {
   margin: 0 auto;
 }
 
-/* .player-bottom-2-1 { */
-/* border: 1px solid white; */
-/* } */
-
 .player-bottom-2-2 {
   text-align: center;
   display: flex;
@@ -144,22 +136,16 @@ i {
   align-items: center;
   justify-content: center;
   margin-top: 50vh;
-  /* gap: 0.5rem; */
-  /* margin-right: 35vw; */
 }
 
 .player-bottom-2-1,
 .player-bottom-2-2 {
-  /* border: 1px solid white; */
   border-radius: 10px;
   padding: 2rem 4rem;
   background-color: #c7365f;
   color: white;
   gap: 0.5rem;
 }
-
-/* .player-bottom-2-2 { */
-/* } */
 
 .players-title {
   font-size: 2rem;
