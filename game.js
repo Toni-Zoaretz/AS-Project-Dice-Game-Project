@@ -14,6 +14,26 @@ const playerTitle1 = document.querySelector(".player1"); //player 1 title
 const playerTitle2 = document.querySelector(".player2"); // player 2 title
 const winMessage1 = document.querySelector(".winMessage1"); //win meaage -1
 const winMessage2 = document.querySelector(".winMessage2"); //win meaage -2
+const inputTarget = document.querySelector("#inputTarget"); //input
+const btnTarget = document.querySelector("#btn-target"); //btn tardet
+const modal = document.querySelector("#modal");
+const select = document.querySelector(".select");
+
+let teragetInput = Number(inputTarget.value);
+
+function inputTarget1() {
+  if (Number(inputTarget.value) < 100) {
+    select.textContent = "THE TARGET NUMBER SHOULD BE BETWEEN 100 - 500";
+  } else {
+    teragetInput += Number(inputTarget.value);
+    console.log(teragetInput);
+    modal.style.visibility = "hidden";
+  }
+}
+
+btnTarget.addEventListener("click", function () {
+  inputTarget1();
+});
 
 let totalPlayer1 = 0;
 let totalPlayer2 = 0;
@@ -81,8 +101,8 @@ hold.addEventListener("click", function () {
 function isThereWin() {
   if (
     Number(
-      player1current.textContent === 100 ||
-        Number(player2current.textContent) > 100
+      player1current.textContent === teragetInput ||
+        Number(player2current.textContent) > teragetInput
     )
   ) {
     player1Win.style.visibility = "visible";
@@ -93,8 +113,8 @@ function isThereWin() {
     winMessage1.style.color = "#c7365f";
   } else if (
     Number(
-      player2current.textContent === 100 ||
-        Number(player1current.textContent) > 100
+      player2current.textContent === teragetInput ||
+        Number(player1current.textContent) > teragetInput
     )
   ) {
     player2Win.style.visibility = "visible";
