@@ -4,71 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ca5395b5d3.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Dice_Game_Project</title>
   </head>
   <body>
-    <section class="full-screen">
-      <!------------- SECTION-LEFT-PLAYER-PINK ------------------>
-      <div class="section-right">
-        <div class="player-div-top box">
-          <div class="player-div-top-info">
-            <div class="player-title">
-              <span>PLAYER 1</span>
-            </div>
-            <div class="total">
-              <span id="player-1-total">0</span>
-            </div>
-          </div>
+    <div class="flex-contanier">
+      <!-- -------------PLAYER-1------------- -->
+      <div class="player-1" id="player-1-div">
+        <div class="player-title">
+          <h2 class="players-title player1">PLAYER 1</h2>
+          <span class="players-total" id="player-1-total">0</span>
         </div>
-        <div class="player-div-bottom box">
-          <div class="player-div-bottom-info">
-            <div class="player-title">
-              <span>current</span>
-            </div>
-            <div class="total">
-              <span id="player-1-current">0</span>
-            </div>
-          </div>
+        <div class="win" id="win1">
+          <span class="winMessage1">YOU WIN!🎉</span>
+        </div>
+        <div class="player-bottom">
+          <div class="player-bottom-2 player-bottom-2-1">
+            <div class="players-current-titel">CURRENT</div>
+            <div class="players-current-score" id="player-1-current">0</div>
           </div>
         </div>
       </div>
-      <!------------- MIDDLE-BUTTONS ------------------>
-      <div class="all-game-buttons">
-        <button id="new-game-btn">NEW GAME</button>
-        <div class="dice-imgs">
-          <img  src="Assets/dice1.png" id="dice-1" />
-          <img src="Assets/dice2.png" id="dice-2"/>
+      <!-- -----------------MIDEL-------------- -->
+      <div class="middel">
+        <button class="btn" id="new-game-btn">
+          <i class="fa-solid fa-repeat"></i>NEW GAME
+        </button>
+        <div class="imges">
+          <img src="Assets/dice1.png" class="dice-1" id="dice-1" />
+          <img src="Assets/dice2.png" class="dice-2" id="dice-2" />
         </div>
-        <div class="roll-hold">
-          <button id="roll-dice-btn">ROLL DICE</button>
-          <button id="hold">HOLD</button>
-        </div>
+        <button class="btn" id="roll-dice-btn">
+          <i class="fa-solid fa-dice"></i>ROLL DICE
+        </button>
+        <button class="btn" id="hold">
+          <i class="fa-regular fa-hand"></i>HOLD
+        </button>
       </div>
-      <!----------------- SECTION-RIGHT-PLAYER-PURPEL------------->
-      <div class="section-left">
-        <div class="player-div-top box">
-          <div class="player-div-top-info">
-            <div class="player-title">
-              <span>PLAYER 2</span>
-            </div>
-            <div class="total">
-              <span id="player-2-total">0</span>
-            </div>
-          </div>
+      <!-- -------------PLAYER-2------------- -->
+      <div class="player-2" id="player-2-div">
+        <div class="player-title player-title-2">
+          <h2 class="players-title player2">PLAYER 2</h2>
+          <span class="players-total" id="player-2-total">0</span>
         </div>
-        <div class="player-div-bottom box">
-          <div class="player-div-bottom-info">
-            <div class="player-title">
-              <span>current</span>
-            </div>
-            <div class="total">
-              <span id="player-2-current">0</span>
-            </div>
+        <div class="win" id="win2">
+          <span class="winMessage2">YOU WIN!🎉</span>
+        </div>
+        <div class="player-bottom player-bottom-2">
+          <div class="player-bottom-2 player-bottom-2-2">
+            <div class="players-current-titel">CURRENT</div>
+            <div class="players-current-score" id="player-2-current">0</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </body>
-  <script src="/game.js"></script>
+  <script src="game.js"></script>
 </html>
