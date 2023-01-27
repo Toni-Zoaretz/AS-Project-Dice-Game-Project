@@ -1,3 +1,4 @@
+"use strict";
 const newGame = document.querySelector("#new-game-btn"); //new game btn
 const rollDice = document.querySelector("#roll-dice-btn"); // roll dice btn
 const hold = document.querySelector("#hold"); // hold btn

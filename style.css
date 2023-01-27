@@ -233,11 +233,12 @@ i {
     font-weight: 600;
   }
 
-  .winMessage1 {
+  .winMessage1,
+  .winMessage2 {
     font-size: 1rem;
   }
 
-  .winMessage2 {
-    font-size: 1rem;
+  .winMessage1 {
+    margin-left: 5rem;
   }
 }
