@@ -41,7 +41,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-
   background: linear-gradient(
     135deg,
     rgb(160, 28, 52) 30%,
@@ -183,4 +182,62 @@ i {
   font-weight: 900;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 500px) and (max-width: 769px) {
+  .middel {
+    width: 30%;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+  }
+
+  .dice-1,
+  .dice-2 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .players-title {
+    font-size: 1.2rem;
+  }
+
+  .players-total {
+    font-size: 2.3rem;
+  }
+
+  .player-bottom-2-1,
+  .player-bottom-2-2 {
+    padding: 1rem 1rem;
+  }
+
+  .player-bottom-2-1 {
+    margin-top: 0 auto;
+  }
+
+  .player-bottom {
+    margin-top: 0px;
+  }
+
+  .player-bottom-2-1 {
+    margin-top: 24rem;
+  }
+
+  .player-bottom-2-2 {
+    margin-top: 25rem;
+  }
+
+  .players-current-score {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .winMessage1 {
+    font-size: 1rem;
+  }
+
+  .winMessage2 {
+    font-size: 1rem;
+  }
 }
