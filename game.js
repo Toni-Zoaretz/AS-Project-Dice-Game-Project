@@ -19,6 +19,12 @@ const btnTarget = document.querySelector("#btn-target"); //btn tardet
 const modal = document.querySelector("#modal");
 const select = document.querySelector(".select");
 
+const sfx = {
+  push: new Howel({
+    src: [],
+  }),
+};
+
 let teragetInput = Number(inputTarget.value);
 
 function inputTarget1() {
