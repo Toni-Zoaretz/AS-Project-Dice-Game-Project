@@ -133,6 +133,10 @@ input {
   cursor: pointer;
 }
 
+.btn-roll-dice:disabled {
+  background-color: rgb(40, 37, 37);
+}
+
 i {
   margin-right: 0.2rem;
 }
@@ -247,6 +251,27 @@ i {
   font-weight: 900;
   display: flex;
   justify-content: center;
+}
+
+.total-wining-1,
+.total-wining-2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  border: 1px solid white;
+  width: 100px;
+  color: #333;
+  text-align: center;
+
+  /* color: white; */
+  /* background-color: #c7365f; */
+}
+
+.total-wining-1 {
+  visibility: hidden;
+}
+
+.wins-title {
+  font-size: 1rem;
 }
 
 @media (min-width: 500px) and (max-width: 769px) {

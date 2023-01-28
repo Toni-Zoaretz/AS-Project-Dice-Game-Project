@@ -14,7 +14,6 @@
       src="https://kit.fontawesome.com/ca5395b5d3.js"
       crossorigin="anonymous"
     ></script>
-
     <link rel="stylesheet" href="style.css" />
     <title>Dice_Game_Project</title>
   </head>
@@ -55,6 +54,12 @@
         <div class="win" id="win1">
           <span class="winMessage1">YOU WIN!🎉</span>
         </div>
+
+        <div class="total-wining-1">
+          <span class="wins-title winsLabel1">WINS</span>
+          <span id="num-wins-player-1" class="winsLabel1">0</span>
+        </div>
+
         <div class="player-bottom">
           <div class="player-bottom-2 player-bottom-2-1">
             <div class="players-current-titel">CURRENT</div>
@@ -71,7 +76,7 @@
           <img src="Assets/dice1.png" class="dice-1" id="dice-1" />
           <img src="Assets/dice2.png" class="dice-2" id="dice-2" />
         </div>
-        <button class="btn" id="roll-dice-btn">
+        <button class="btn btn-roll-dice" id="roll-dice-btn">
           <i class="fa-solid fa-dice"></i>ROLL DICE
         </button>
         <button class="btn" id="hold">
@@ -87,6 +92,12 @@
         <div class="win" id="win2">
           <span class="winMessage2">YOU WIN!🎉</span>
         </div>
+
+        <div class="total-wining-2">
+          <span class="wins-title winsLabel2">WINS</span>
+          <span id="num-wins-player-2" class="winsLabel2">0</span>
+        </div>
+
         <div class="player-bottom player-bottom-2">
           <div class="player-bottom-2 player-bottom-2-2">
             <div class="players-current-titel">CURRENT</div>
@@ -96,5 +107,6 @@
       </div>
     </div>
   </body>
+  <audio id="victory-sound" src="/Assets/success-1-6297.mp3"></audio>
   <script src="game.js"></script>
 </html>

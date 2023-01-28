@@ -18,6 +18,14 @@ const inputTarget = document.querySelector("#inputTarget"); //input
 const btnTarget = document.querySelector("#btn-target"); //btn tardet
 const modal = document.querySelector("#modal");
 const select = document.querySelector(".select");
+const victorySound = document.querySelector("#victory-sound");
+const numWins1 = document.querySelector("#num-wins-player-1");
+const numWins2 = document.querySelector("#num-wins-player-2");
+const winLabel1 = document.querySelectorAll(".winsLabel1");
+const winLabel2 = document.querySelectorAll(".winsLabel2");
+const winPlayer1Hidden = document.querySelector(".total-wining-1");
+const dice1 = document.querySelector("#dice-1");
+const dice2 = document.querySelector("#dice-2");
 
 let teragetInput = Number(inputTarget.value);
 
@@ -28,6 +36,7 @@ function inputTarget1() {
     teragetInput += Number(inputTarget.value);
     console.log(teragetInput);
     modal.style.visibility = "hidden";
+    winPlayer1Hidden.style.visibility = "visible";
   }
 }
 
@@ -35,6 +44,8 @@ btnTarget.addEventListener("click", function () {
   inputTarget1();
 });
 
+let numWinsPlayer1 = 0;
+let numWinsPlaye2 = 0;
 let totalPlayer1 = 0;
 let totalPlayer2 = 0;
 let currentPlayer1 = 0;
@@ -43,11 +54,11 @@ let IsPlayer1 = true;
 
 rollDice.addEventListener("click", function () {
   if (IsPlayer1) {
-    let dice1 = document.querySelector("#dice-1");
+    // let dice1 = document.querySelector("#dice-1");
     const firstRandomNum = Math.floor(Math.random() * 6) + 1;
     const firstDiceImg = "Assets/dice" + firstRandomNum + ".png";
     dice1.setAttribute("src", firstDiceImg);
-    let dice2 = document.querySelector("#dice-2");
+    // let dice2 = document.querySelector("#dice-2");
     const secondeRandomNum = Math.floor(Math.random() * 6) + 1;
     const secondeDiceImg = "Assets/dice" + secondeRandomNum + ".png";
     dice2.setAttribute("src", secondeDiceImg);
@@ -59,12 +70,12 @@ rollDice.addEventListener("click", function () {
       player1current.innerText = currentPlayer1;
     }
   } else {
-    let dice1 = document.querySelector("#dice-1");
-    console.log(dice1);
+    // let dice1 = document.querySelector("#dice-1");
+    // console.log(dice1);
     const firstRandomNum = Math.floor(Math.random() * 6) + 1;
     const firstDiceImg = "Assets/dice" + firstRandomNum + ".png";
     dice1.setAttribute("src", firstDiceImg);
-    let dice2 = document.querySelector("#dice-2");
+    // let dice2 = document.querySelector("#dice-2");
     const secondeRandomNum = Math.floor(Math.random() * 6) + 1;
     const secondeDiceImg = "Assets/dice" + secondeRandomNum + ".png";
     dice2.setAttribute("src", secondeDiceImg);
@@ -111,6 +122,12 @@ function isThereWin() {
     player1total.style.fontSize = "5rem";
     playerTitle1.style.color = "#c7365f";
     winMessage1.style.color = "#c7365f";
+    numWinsPlayer1++;
+    numWins1.textContent = numWinsPlayer1;
+    winLabel1[0].style.color = "#c7365f";
+    winLabel1[1].style.color = "#c7365f";
+    rollDice.disabled = true;
+    victorySound.play();
   } else if (
     Number(
       player2current.textContent === teragetInput ||
@@ -124,6 +141,12 @@ function isThereWin() {
     player2total.style.fontSize = "5rem";
     playerTitle2.style.color = "#c7365f";
     winMessage2.style.color = "#c7365f";
+    numWinsPlaye2++;
+    numWins2.textContent = numWinsPlaye2;
+    winLabel2[0].style.color = "#c7365f";
+    winLabel2[1].style.color = "#c7365f";
+    rollDice.disabled = true;
+    victorySound.play();
   } else {
     player1Win.style.visibility = "hidden";
     player2Win.style.visibility = "hidden";
@@ -150,5 +173,11 @@ function resetGame() {
   playerTitle2.style.color = "#333";
   player1Div.style.backgroundColor = "rgba(255, 255, 255, 0.504)";
   player2Div.style.backgroundColor = "rgba(255, 255, 255, 0.211)";
+  rollDice.disabled = false;
+  winLabel1[0].style.color = "#333";
+  winLabel1[1].style.color = "#333";
+  winLabel2[0].style.color = "#333";
+  winLabel2[1].style.color = "#333";
+
   isThereWin();
 }
