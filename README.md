@@ -1,7 +1,7 @@
 # 🎲 About my Dice Game
 
 I was given a task @AppleSeeds Bootcamp to to build a responsive Dice Game.<br>
-The game writen using `HTML`,`CSS`,`JavaScript`.
+I implement the Dice Game using `HTML`,`CSS`,`JavaScript`.
 
 ### Dice Game link:
 
