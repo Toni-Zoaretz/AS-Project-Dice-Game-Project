@@ -27,6 +27,7 @@ const winPlayer1Hidden = document.querySelector(".total-wining-1");
 const dice1 = document.querySelector("#dice-1");
 const dice2 = document.querySelector("#dice-2");
 const holdSound = document.querySelector("#hold-sound");
+const diceSound = document.querySelector("#dice-sound");
 
 let teragetInput = Number(inputTarget.value);
 
@@ -55,6 +56,7 @@ let IsPlayer1 = true;
 
 rollDice.addEventListener("click", function () {
   if (IsPlayer1) {
+    diceSound.play();
     const firstRandomNum = Math.floor(Math.random() * 6) + 1;
     const firstDiceImg = "Assets/dice" + firstRandomNum + ".png";
     dice1.setAttribute("src", firstDiceImg);
@@ -69,6 +71,7 @@ rollDice.addEventListener("click", function () {
       player1current.innerText = currentPlayer1;
     }
   } else {
+    diceSound.play();
     const firstRandomNum = Math.floor(Math.random() * 6) + 1;
     const firstDiceImg = "Assets/dice" + firstRandomNum + ".png";
     dice1.setAttribute("src", firstDiceImg);
