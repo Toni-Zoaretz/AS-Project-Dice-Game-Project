@@ -277,7 +277,7 @@ i {
   font-size: 1rem;
 }
 
-@media (min-width: 500px) and (max-width: 769px) {
+@media (min-width: 430px) and (max-width: 769px) {
   .middel {
     width: 30%;
   }
