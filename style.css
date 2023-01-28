@@ -32,7 +32,6 @@ body {
   position: absolute;
   z-index: 1;
   background: linear-gradient(150deg, #e19fc4 30%, #b47299 70%);
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -359,5 +358,75 @@ i {
     font-size: 0.7rem;
     font-weight: 800;
     text-align: center;
+  }
+}
+
+@media (max-width: 429px) {
+  .welcome {
+    width: 22rem;
+    height: 44rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 1rem;
+  }
+
+  .players-title {
+    font-size: 1.2rem;
+  }
+
+  .players-total {
+    font-size: 2rem;
+  }
+
+  .player-1 {
+    width: 50%;
+    border: 1px solid white;
+  }
+  .player-2 {
+    width: 40%;
+    border: 1px solid white;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    color: white;
+  }
+
+  .dice-1,
+  .dice-2 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .middel {
+    border: 1px solid white;
+  }
+
+  .player-bottom-2-1 {
+    width: 5px;
+    height: 10vh;
+    margin-right: 0.7rem;
+  }
+  .player-bottom-2-2 {
+    width: 5px;
+    height: 10vh;
+  }
+
+  .players-current-score {
+    font-size: 1rem;
+  }
+
+  .players-current-titel {
+    font-size: 0.9rem;
   }
 }
