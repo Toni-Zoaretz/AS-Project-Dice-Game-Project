@@ -54,11 +54,9 @@ let IsPlayer1 = true;
 
 rollDice.addEventListener("click", function () {
   if (IsPlayer1) {
-    // let dice1 = document.querySelector("#dice-1");
     const firstRandomNum = Math.floor(Math.random() * 6) + 1;
     const firstDiceImg = "Assets/dice" + firstRandomNum + ".png";
     dice1.setAttribute("src", firstDiceImg);
-    // let dice2 = document.querySelector("#dice-2");
     const secondeRandomNum = Math.floor(Math.random() * 6) + 1;
     const secondeDiceImg = "Assets/dice" + secondeRandomNum + ".png";
     dice2.setAttribute("src", secondeDiceImg);
@@ -70,12 +68,9 @@ rollDice.addEventListener("click", function () {
       player1current.innerText = currentPlayer1;
     }
   } else {
-    // let dice1 = document.querySelector("#dice-1");
-    // console.log(dice1);
     const firstRandomNum = Math.floor(Math.random() * 6) + 1;
     const firstDiceImg = "Assets/dice" + firstRandomNum + ".png";
     dice1.setAttribute("src", firstDiceImg);
-    // let dice2 = document.querySelector("#dice-2");
     const secondeRandomNum = Math.floor(Math.random() * 6) + 1;
     const secondeDiceImg = "Assets/dice" + secondeRandomNum + ".png";
     dice2.setAttribute("src", secondeDiceImg);
