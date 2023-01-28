@@ -26,6 +26,7 @@ const winLabel2 = document.querySelectorAll(".winsLabel2");
 const winPlayer1Hidden = document.querySelector(".total-wining-1");
 const dice1 = document.querySelector("#dice-1");
 const dice2 = document.querySelector("#dice-2");
+const holdSound = document.querySelector("#hold-sound");
 
 let teragetInput = Number(inputTarget.value);
 
@@ -93,6 +94,7 @@ hold.addEventListener("click", function () {
     player1current.textContent = currentPlayer1;
     player2Div.style.backgroundColor = "rgba(255, 255, 255, 0.504)";
     player1Div.style.backgroundColor = "rgba(255, 255, 255, 0.211)";
+    holdSound.play();
   } else {
     totalPlayer2 += currentPlayer2;
     currentPlayer2 = 0;
@@ -100,6 +102,7 @@ hold.addEventListener("click", function () {
     player2current.textContent = currentPlayer2;
     player2Div.style.backgroundColor = "rgba(255, 255, 255, 0.211)";
     player1Div.style.backgroundColor = "rgba(255, 255, 255, 0.504)";
+    holdSound.play();
   }
   IsPlayer1 = !IsPlayer1;
 });
