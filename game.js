@@ -57,6 +57,7 @@ let IsPlayer1 = true;
 rollDice.addEventListener("click", function () {
   if (IsPlayer1) {
     diceSound.play();
+    diceSound.volume = 0.2;
     const firstRandomNum = Math.floor(Math.random() * 6) + 1;
     const firstDiceImg = "Assets/dice" + firstRandomNum + ".png";
     dice1.setAttribute("src", firstDiceImg);
@@ -72,6 +73,7 @@ rollDice.addEventListener("click", function () {
     }
   } else {
     diceSound.play();
+    diceSound.volume = 0.2;
     const firstRandomNum = Math.floor(Math.random() * 6) + 1;
     const firstDiceImg = "Assets/dice" + firstRandomNum + ".png";
     dice1.setAttribute("src", firstDiceImg);
